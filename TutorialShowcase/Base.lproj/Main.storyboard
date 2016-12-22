@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,179 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cep-RX-HeD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.066666666666666666" green="0.5725490196078431" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="107" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ufk-tb-2vz">
+                                <rect key="frame" x="16" y="39" width="343" height="628"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="main" rowHeight="107" id="tDi-yp-WlZ" customClass="VideoCell">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="107"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tDi-yp-WlZ" id="8vF-FR-4RU">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="106"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k9F-43-99y">
+                                                    <rect key="frame" x="8" y="8" width="327" height="90"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DXS-W3-0DC">
+                                                            <rect key="frame" x="8" y="8" width="100" height="74"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="100" id="Nzh-dg-yPm"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How To Play Like Lionel Messi How To Play Like Lionel Messi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wT-Q6-OVo" userLabel="titleLbl">
+                                                            <rect key="frame" x="116" y="8" width="203" height="32"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                                            <color key="textColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjD-XX-lkc" userLabel="descLbl">
+                                                            <rect key="frame" x="116" y="41" width="203" height="41"/>
+                                                            <string key="text">Learn how to play soccer like Lionel Messi by watching this video Learn how to play soccer like Lionel Messi by watching this video</string>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                                            <color key="textColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="7wT-Q6-OVo" firstAttribute="leading" secondItem="DXS-W3-0DC" secondAttribute="trailing" constant="8" id="4lS-Wx-Iyd"/>
+                                                        <constraint firstItem="DXS-W3-0DC" firstAttribute="top" secondItem="k9F-43-99y" secondAttribute="top" constant="8" id="5vj-pt-9DS"/>
+                                                        <constraint firstAttribute="trailing" secondItem="7wT-Q6-OVo" secondAttribute="trailing" constant="8" id="FyN-qo-INN"/>
+                                                        <constraint firstItem="7wT-Q6-OVo" firstAttribute="top" secondItem="k9F-43-99y" secondAttribute="top" constant="8" id="GJJ-CC-4ge"/>
+                                                        <constraint firstAttribute="trailing" secondItem="yjD-XX-lkc" secondAttribute="trailing" constant="8" id="I7B-UG-Xfx"/>
+                                                        <constraint firstAttribute="bottom" secondItem="yjD-XX-lkc" secondAttribute="bottom" constant="8" id="PQU-XP-n1I"/>
+                                                        <constraint firstAttribute="bottom" secondItem="7wT-Q6-OVo" secondAttribute="bottom" constant="50" id="Pxb-sp-BXt"/>
+                                                        <constraint firstItem="yjD-XX-lkc" firstAttribute="leading" secondItem="DXS-W3-0DC" secondAttribute="trailing" constant="8" id="WLn-gL-FpD"/>
+                                                        <constraint firstAttribute="bottom" secondItem="DXS-W3-0DC" secondAttribute="bottom" constant="8" id="XWx-VD-Jmq"/>
+                                                        <constraint firstItem="DXS-W3-0DC" firstAttribute="leading" secondItem="k9F-43-99y" secondAttribute="leading" constant="8" id="mFG-rv-jvf"/>
+                                                        <constraint firstItem="yjD-XX-lkc" firstAttribute="top" secondItem="7wT-Q6-OVo" secondAttribute="bottom" constant="1" id="tdR-5A-QYj"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="k9F-43-99y" firstAttribute="top" secondItem="8vF-FR-4RU" secondAttribute="topMargin" id="7fs-jh-UaQ"/>
+                                                <constraint firstItem="k9F-43-99y" firstAttribute="leading" secondItem="8vF-FR-4RU" secondAttribute="leadingMargin" id="8ne-B8-Nq7"/>
+                                                <constraint firstItem="k9F-43-99y" firstAttribute="bottom" secondItem="8vF-FR-4RU" secondAttribute="bottomMargin" id="puk-4Y-2eh"/>
+                                                <constraint firstItem="k9F-43-99y" firstAttribute="trailing" secondItem="8vF-FR-4RU" secondAttribute="trailingMargin" id="uFk-cn-l0f"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="cellView" destination="k9F-43-99y" id="0HE-gw-Z1X"/>
+                                            <outlet property="descLbl" destination="yjD-XX-lkc" id="0tt-cU-KkB"/>
+                                            <outlet property="thumbImg" destination="DXS-W3-0DC" id="bQK-DF-gKg"/>
+                                            <outlet property="titleLbl" destination="7wT-Q6-OVo" id="YDS-sY-m1l"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ufk-tb-2vz" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Cbt-Zf-oKg"/>
+                            <constraint firstItem="ufk-tb-2vz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="19" id="ZIN-U7-ghA"/>
+                            <constraint firstItem="ufk-tb-2vz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="nlc-QS-W8V"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ufk-tb-2vz" secondAttribute="bottom" id="uL5-JZ-B1e"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="ufk-tb-2vz" id="y7F-bn-FPK"/>
+                        <segue destination="11E-rC-kH8" kind="presentation" identifier="videoVC" id="vL8-nv-Hxa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="48.125937031484263"/>
+        </scene>
+        <!--VideoVC-->
+        <scene sceneID="cyJ-xv-CHi">
+            <objects>
+                <viewController id="11E-rC-kH8" customClass="VideoVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mlH-tE-uzM"/>
+                        <viewControllerLayoutGuide type="bottom" id="15u-PE-u7n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q36-IS-SpZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bbC-E1-j72">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="294"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="294" id="L4K-xS-KSy"/>
+                                </constraints>
+                            </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" How To Play Like Lionel Messi How To Play Like Lionel Messi How To Play Like Lionel Messi " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4c-eo-Sg5">
+                                <rect key="frame" x="16" y="302" width="343" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="xfw-qn-1yl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbQ-Te-LAe">
+                                <rect key="frame" x="16" y="374" width="343" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="6Bc-XT-ZQG"/>
+                                </constraints>
+                                <string key="text">Learn how to play soccer like Lionel Messi by watching this video Learn how to play soccer like Lionel Messi by watching this video Learn how to play soccer like Lionel Messi by watching this video Learn how to play soccer like Lionel Messi by watching this video </string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOX-XU-qxa">
+                                <rect key="frame" x="16" y="615" width="343" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.018655871065531477" blue="0.14846803647445819" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="kxi-rd-CBc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="DONE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="donePressed:" destination="11E-rC-kH8" eventType="touchUpInside" id="JuD-ff-gUg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OOX-XU-qxa" firstAttribute="trailing" secondItem="q36-IS-SpZ" secondAttribute="trailingMargin" id="6sh-an-yfC"/>
+                            <constraint firstItem="D4c-eo-Sg5" firstAttribute="top" secondItem="bbC-E1-j72" secondAttribute="bottom" constant="20" id="F4o-kb-Cxr"/>
+                            <constraint firstItem="D4c-eo-Sg5" firstAttribute="leading" secondItem="q36-IS-SpZ" secondAttribute="leadingMargin" id="Hwo-z4-kRd"/>
+                            <constraint firstItem="bbC-E1-j72" firstAttribute="top" secondItem="q36-IS-SpZ" secondAttribute="top" id="J6j-PC-NBm"/>
+                            <constraint firstItem="OOX-XU-qxa" firstAttribute="leading" secondItem="q36-IS-SpZ" secondAttribute="leadingMargin" id="TJ0-PH-GWg"/>
+                            <constraint firstItem="fbQ-Te-LAe" firstAttribute="trailing" secondItem="q36-IS-SpZ" secondAttribute="trailingMargin" id="VJN-uC-4VQ"/>
+                            <constraint firstAttribute="trailing" secondItem="bbC-E1-j72" secondAttribute="trailing" id="b8b-Ne-8CF"/>
+                            <constraint firstItem="15u-PE-u7n" firstAttribute="top" secondItem="OOX-XU-qxa" secondAttribute="bottom" constant="8" id="bmf-an-E0w"/>
+                            <constraint firstItem="bbC-E1-j72" firstAttribute="top" secondItem="q36-IS-SpZ" secondAttribute="top" id="f6k-po-eJZ"/>
+                            <constraint firstItem="fbQ-Te-LAe" firstAttribute="top" secondItem="D4c-eo-Sg5" secondAttribute="bottom" constant="8" id="fqC-ZN-7HF"/>
+                            <constraint firstItem="bbC-E1-j72" firstAttribute="leading" secondItem="q36-IS-SpZ" secondAttribute="leading" id="oqu-Gw-iYU"/>
+                            <constraint firstItem="D4c-eo-Sg5" firstAttribute="trailing" secondItem="q36-IS-SpZ" secondAttribute="trailingMargin" id="pbf-BC-Nl1"/>
+                            <constraint firstItem="D4c-eo-Sg5" firstAttribute="top" secondItem="bbC-E1-j72" secondAttribute="bottom" constant="8" id="rRc-i8-LcA"/>
+                            <constraint firstItem="fbQ-Te-LAe" firstAttribute="leading" secondItem="q36-IS-SpZ" secondAttribute="leadingMargin" id="xoy-dC-tiX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descLbl" destination="fbQ-Te-LAe" id="adD-GP-la8"/>
+                        <outlet property="titleLbl" destination="D4c-eo-Sg5" id="RtF-mz-JX7"/>
+                        <outlet property="webview" destination="bbC-E1-j72" id="H5q-95-WX5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aZ2-Um-ufO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.2" y="42.728635682158924"/>
         </scene>
     </scenes>
 </document>

@@ -13,6 +13,10 @@
 		9F6D66ED1E0A47C400D2DB51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F6D66EB1E0A47C400D2DB51 /* Main.storyboard */; };
 		9F6D66EF1E0A47C400D2DB51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F6D66EE1E0A47C400D2DB51 /* Assets.xcassets */; };
 		9F6D66F21E0A47C400D2DB51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F6D66F01E0A47C400D2DB51 /* LaunchScreen.storyboard */; };
+		9F6D66FC1E0A483600D2DB51 /* HTTPService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6D66FB1E0A483600D2DB51 /* HTTPService.m */; };
+		9F6D67001E0B830400D2DB51 /* VideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6D66FF1E0B830400D2DB51 /* VideoCell.m */; };
+		9F6D67041E0B88D700D2DB51 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6D67031E0B88D700D2DB51 /* Video.m */; };
+		9F6D670B1E0B955A00D2DB51 /* VideoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6D670A1E0B955A00D2DB51 /* VideoVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,14 @@
 		9F6D66EE1E0A47C400D2DB51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F6D66F11E0A47C400D2DB51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F6D66F31E0A47C400D2DB51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F6D66FA1E0A483600D2DB51 /* HTTPService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPService.h; sourceTree = "<group>"; };
+		9F6D66FB1E0A483600D2DB51 /* HTTPService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPService.m; sourceTree = "<group>"; };
+		9F6D66FE1E0B830400D2DB51 /* VideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCell.h; sourceTree = "<group>"; };
+		9F6D66FF1E0B830400D2DB51 /* VideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCell.m; sourceTree = "<group>"; };
+		9F6D67021E0B88D700D2DB51 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		9F6D67031E0B88D700D2DB51 /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
+		9F6D67091E0B955A00D2DB51 /* VideoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoVC.h; sourceTree = "<group>"; };
+		9F6D670A1E0B955A00D2DB51 /* VideoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +70,12 @@
 		9F6D66E11E0A47C400D2DB51 /* TutorialShowcase */ = {
 			isa = PBXGroup;
 			children = (
+				9F6D66F91E0A47E300D2DB51 /* Services */,
+				9F6D67011E0B88C800D2DB51 /* Model */,
+				9F6D66FD1E0B82EA00D2DB51 /* View */,
+				9F6D67051E0B950000D2DB51 /* Controller */,
 				9F6D66E51E0A47C400D2DB51 /* AppDelegate.h */,
 				9F6D66E61E0A47C400D2DB51 /* AppDelegate.m */,
-				9F6D66E81E0A47C400D2DB51 /* ViewController.h */,
-				9F6D66E91E0A47C400D2DB51 /* ViewController.m */,
 				9F6D66EB1E0A47C400D2DB51 /* Main.storyboard */,
 				9F6D66EE1E0A47C400D2DB51 /* Assets.xcassets */,
 				9F6D66F01E0A47C400D2DB51 /* LaunchScreen.storyboard */,
@@ -77,6 +91,44 @@
 				9F6D66E31E0A47C400D2DB51 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9F6D66F91E0A47E300D2DB51 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9F6D66FA1E0A483600D2DB51 /* HTTPService.h */,
+				9F6D66FB1E0A483600D2DB51 /* HTTPService.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		9F6D66FD1E0B82EA00D2DB51 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F6D66FE1E0B830400D2DB51 /* VideoCell.h */,
+				9F6D66FF1E0B830400D2DB51 /* VideoCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		9F6D67011E0B88C800D2DB51 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9F6D67021E0B88D700D2DB51 /* Video.h */,
+				9F6D67031E0B88D700D2DB51 /* Video.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9F6D67051E0B950000D2DB51 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9F6D66E81E0A47C400D2DB51 /* ViewController.h */,
+				9F6D66E91E0A47C400D2DB51 /* ViewController.m */,
+				9F6D67091E0B955A00D2DB51 /* VideoVC.h */,
+				9F6D670A1E0B955A00D2DB51 /* VideoVC.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +204,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F6D66EA1E0A47C400D2DB51 /* ViewController.m in Sources */,
+				9F6D67001E0B830400D2DB51 /* VideoCell.m in Sources */,
+				9F6D66FC1E0A483600D2DB51 /* HTTPService.m in Sources */,
+				9F6D67041E0B88D700D2DB51 /* Video.m in Sources */,
+				9F6D670B1E0B955A00D2DB51 /* VideoVC.m in Sources */,
 				9F6D66E71E0A47C400D2DB51 /* AppDelegate.m in Sources */,
 				9F6D66E41E0A47C400D2DB51 /* main.m in Sources */,
 			);
