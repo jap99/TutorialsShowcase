@@ -26,17 +26,13 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
-//    [[HTTPService instance] test];
-    
     self.videoList = [[NSArray alloc]init];
     
     [[HTTPService instance]getTutorials:^(NSArray * _Nullable dataArray, NSString * _Nullable errMessage) {
         if (dataArray) {
             
             NSMutableArray *arr = [[NSMutableArray alloc]init];
-            
-            // Because our array is full of dictionaries
-                // Grab dictionaries out of the array, put into video, then add to our array
+    
             for (NSDictionary *d in dataArray) {
                 Video *vid = [[Video alloc]init];
                 vid.videoTitle = [d objectForKey:@"title"];
@@ -44,7 +40,6 @@
                 vid.thumbnailUrl = [d objectForKey:@"thumbnail"];
                 vid.videoIframe = [d objectForKey:@"iframe"];
                 
-                // add the video to our mutable array
                 [arr addObject:vid];
             }
             self.videoList = arr;
@@ -66,8 +61,6 @@
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     // grab the video
     Video *video = [self.videoList objectAtIndex:indexPath.row];
-    // pass it into the cell
-    // grab the cell and caste it to VideoCell
     VideoCell *vidCell = (VideoCell*)cell;
     [vidCell updateUI:video];
 }

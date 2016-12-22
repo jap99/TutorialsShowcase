@@ -36,7 +36,7 @@
 
 
 -(void)updateUI:(nonnull Video*)video {
-    // the cell passes in a video and we set the iboutlets based on things in that video class
+    // the cell passes in a video
     self.titleLbl.text = video.videoTitle;
     self.descLbl.text = video.videoDescription;
     

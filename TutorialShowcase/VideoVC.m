@@ -32,8 +32,7 @@
     
     self.titleLbl.text = self.video.videoTitle;
     self.descLbl.text = self.video.videoDescription;
-    
-    // Add some css after the webpage is loaded to make it fit perfectly and modify a little html in our server
+
     [self.webview loadHTMLString:self.video.videoIframe baseURL:nil];
 }
 

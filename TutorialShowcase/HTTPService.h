@@ -8,9 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-// create a block called onComplete; takes two parameters
-    //typedef = were creating a new type
-        //returning nothing; we just want to call it
+// create a block
 typedef void (^onComplete)(NSArray * __nullable dataArray, NSString * __nullable errMessage);
 
 @interface HTTPService : NSObject
@@ -18,7 +16,6 @@ typedef void (^onComplete)(NSArray * __nullable dataArray, NSString * __nullable
 + (id) instance;
 - (void) test;
 
-    // get tutorials calls the block when the data is done downloading and passes the data into it and the VC implements the block itself
 - (void) getTutorials:(nullable onComplete)completionHandler;
 
 @end
